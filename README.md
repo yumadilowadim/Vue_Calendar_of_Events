@@ -15,7 +15,7 @@ cats: [ // menu generate
 
 ## Create your items: ##
 ```
-items: [ // объект для генерации контента
+items: [ // items generate
 { day: 20, month: 1, year: 2019, cat: 1, title: 'Test Event #1', desc: 'Test description for test event.', icon: '&#10026;', vip: 0 },
 { day: 30, month: 1, year: 2019, cat: 1, title: 'New test Event #1', desc: 'New description for test event.', icon: '&#10026;', vip: 0 },
 ...
