@@ -1,0 +1,180 @@
+<html>
+<head>
+<meta charset="utf-8" />
+
+<style>
+.rtl{direction:rtl}.vdp-datepicker{position:relative;text-align:left}.vdp-datepicker *{box-sizing:border-box}.vdp-datepicker__calendar{position:absolute;z-index:100;background:#fff;width:300px;border:1px solid #ccc}.vdp-datepicker__calendar header{display:block;line-height:40px}.vdp-datepicker__calendar header span{display:inline-block;text-align:center;width:71.428571428571%;float:left}.vdp-datepicker__calendar header
+.prev,.vdp-datepicker__calendar header
+.next{width:14.285714285714%;float:left;text-indent:-10000px;position:relative}.vdp-datepicker__calendar header
+.prev:after,.vdp-datepicker__calendar header
+.next:after{content:'';position:absolute;left:50%;top:50%;-webkit-transform:translateX(-50%) translateY(-50%);transform:translateX(-50%) translateY(-50%);border:6px solid transparent}.vdp-datepicker__calendar header
+.prev:after{border-right:10px solid #000;margin-left:-5px}.vdp-datepicker__calendar header
+.prev.disabled:after{border-right:10px solid #ddd}.vdp-datepicker__calendar header
+.next:after{border-left:10px solid #000;margin-left:5px}.vdp-datepicker__calendar header
+.next.disabled:after{border-left:10px solid #ddd}.vdp-datepicker__calendar header
+.prev:not(.disabled),.vdp-datepicker__calendar header
+.next:not(.disabled),.vdp-datepicker__calendar header
+.up:not(.disabled){cursor:pointer}.vdp-datepicker__calendar header
+.prev:not(.disabled):hover,.vdp-datepicker__calendar header
+.next:not(.disabled):hover,.vdp-datepicker__calendar header
+.up:not(.disabled):hover{background:#eee}.vdp-datepicker__calendar
+.disabled{color:#ddd;cursor:default}.vdp-datepicker__calendar
+.flex-rtl{display:flex;width:inherit;flex-wrap:wrap}.vdp-datepicker__calendar
+.cell{display:inline-block;padding:0 5px;width:14.285714285714%;height:40px;line-height:40px;text-align:center;vertical-align:middle;border:1px solid transparent}.vdp-datepicker__calendar
+.cell:not(.blank):not(.disabled).day,.vdp-datepicker__calendar
+.cell:not(.blank):not(.disabled).month,.vdp-datepicker__calendar
+.cell:not(.blank):not(.disabled).year{cursor:pointer}.vdp-datepicker__calendar
+.cell:not(.blank):not(.disabled).day:hover,.vdp-datepicker__calendar
+.cell:not(.blank):not(.disabled).month:hover,.vdp-datepicker__calendar
+.cell:not(.blank):not(.disabled).year:hover{border:1px solid #18115f}.vdp-datepicker__calendar
+.cell.selected{background:#18115f;color:#fff}.vdp-datepicker__calendar
+.cell.selected:hover{background:#18115f;color:#fff}.vdp-datepicker__calendar
+.cell.selected.highlighted{background:#18115f;color:#fff}.vdp-datepicker__calendar
+.cell.highlighted{background:#cae5ed}.vdp-datepicker__calendar
+.cell.highlighted.disabled{color:#a3a3a3}.vdp-datepicker__calendar
+.cell.grey{color:#888}.vdp-datepicker__calendar
+.cell.grey:hover{background:inherit}.vdp-datepicker__calendar
+.cell.day-header{font-size:75%;white-space:nowrap;cursor:inherit}.vdp-datepicker__calendar
+.cell.day-header:hover{background:inherit}.vdp-datepicker__calendar
+.month,.vdp-datepicker__calendar
+.year{width:33.333%}.vdp-datepicker__clear-button,.vdp-datepicker__calendar-button{cursor:pointer;font-style:normal}.vdp-datepicker__clear-button.disabled,.vdp-datepicker__calendar-button.disabled{color:#999;cursor:default}
+
+body{font-family:Tahoma}.cnt_form{vertical-align:top;background:#fff;float:left;width:100%;border-radius:6px;border:2px solid #e2e2e2;padding:30px;min-height:150px;margin-bottom:30px;transition:.3s all}.cal_btns button{width:147px;margin-bottom:10px;display:inline-block}.calendar_cats button{display:block;padding:10px;background:#fff;border:1px solid #ccc;min-width:300px;border-top:none;transition:.5s all}.panel_calendar{display:inline-block;width:30%;vertical-align:top}.main_calendar_content{display:inline-block;width:65%}button{background:#fff;border:1px solid #ccc;padding:10px;transition:.5s all}button:hover{background:#f1f1f1;transition:.5s all}.active{background:#000!important;color:#fff!important;transition:.5s all}.cb_date{display:block;color:#888;font-size:12px}.calendar_block{padding:15px;border:1px solid #ccc;margin-bottom:10px}.notactive .selected{color:#222!important;background:#fff!important}.notactive .selected.highlighted{background:#cae5ed!important}.vipblock .content_date{border:2px solid #18115f}.animated{-webkit-animation-duration:1s;animation-duration:1s;-webkit-animation-fill-mode:both;animation-fill-mode:both}@-webkit-keyframes fadeIn{from{opacity:0}to{opacity:1}}@keyframes fadeIn{from{opacity:0}to{opacity:1}}.fadeIn{-webkit-animation-name:fadeIn;animation-name:fadeIn}@-webkit-keyframes fadeInRight{from{opacity:0;-webkit-transform:translate3d(100%,0,0);transform:translate3d(100%,0,0)}to{opacity:1;-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}}@keyframes fadeInRight{from{opacity:0;-webkit-transform:translate3d(100%,0,0);transform:translate3d(100%,0,0)}to{opacity:1;-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}}.fadeInRight{-webkit-animation-name:fadeInRight;animation-name:fadeInRight}@-webkit-keyframes fadeInUp{from{opacity:0;-webkit-transform:translate3d(0,100%,0);transform:translate3d(0,100%,0)}to{opacity:1;-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}}@keyframes fadeInUp{from{opacity:0;-webkit-transform:translate3d(0,100%,0);transform:translate3d(0,100%,0)}to{opacity:1;-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}}.fadeInUp{-webkit-animation-name:fadeInUp;animation-name:fadeInUp}
+</style>
+</head>
+<body>
+<script src="https://unpkg.com/vue"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.23.0/moment.min.js"></script>
+<script src="https://unpkg.com/vuejs-datepicker"></script>
+
+<div id="app">
+<div class="panel_calendar">
+<div class="cal_btns"><button class="btn btn-default clear_btn" v-bind:class="{active: alldates == 1 && changedate == 0}" v-on:click="alldatesCheck" type="button">All dates</button> <button data-vip="0" class="btn btn-default month_vip_btn" v-bind:class="{active: vipdates == 1 && changedate == 0}" type="button" v-on:click="vipdatesCheck">VIP</button></div>
+
+<div class="calendar">
+<vuejs-datepicker v-bind:class="{'notactive': dpchange == ''}" :highlighted="highlighted" :inline="true" v-on:selected="doSomethingInParentComponentFunction"></vuejs-datepicker>
+</div>
+
+<div class="calendar_cats">
+<button type="button" v-for="(cat,n) in cats" v-on:click="gencat = n" v-bind:class="{active: gencat == n}"><span v-html="cat.icon"></span> {{ cat.text }}</button>
+</div>
+<p></p>
+</div>
+
+<div class="main_calendar_content">
+<h3 class="text_right">{{ dpchangetitle }}{{ dpchangeh3 }}</h3>
+<prod_block v-if="alldates == 1 && gencat == item.cat && changedate == 0 || alldates == 1 && gencat == 0 && changedate == 0 || alldates == 1 && vipdates == 1 && gencat == item.cat && changedate == 0" v-for="item in items" v-bind:class="{'vipblock': item.vip == 1}" v-bind:title="item.title" v-bind:icon="item.icon" v-bind:desc="item.desc" v-bind:day="item.day | stringdatefilter" v-bind:month="item.month | stringdatefilter" v-bind:year="item.year"></prod_block>
+
+<prod_block v-if="alldates == 1 && gencat == item.cat && changedate == 1 && dpchange == item.day+'.'+item.month+'.'+item.year || alldates == 1 && gencat == 0 && changedate == 1 && dpchange == item.day+'.'+item.month+'.'+item.year || alldates == 1 && vipdates == 1 && gencat == item.cat && changedate == 1 && dpchange == item.day+'.'+item.month+'.'+item.year" v-for="item in items" v-bind:title="item.title" v-bind:class="{'vipblock': item.vip == 1}" v-bind:icon="item.icon" v-bind:desc="item.desc" v-bind:day="item.day | stringdatefilter" v-bind:month="item.month | stringdatefilter" v-bind:year="item.year"></prod_block>
+
+<prod_block v-if="vipdates == 1 && item.vip == 1 && gencat == item.cat && alldates == 0 && changedate == 0 || vipdates == 1 && item.vip == 1 && gencat == 0 && alldates == 0 && changedate == 0" v-for="item in items" v-bind:title="item.title" v-bind:class="{'vipblock': item.vip == 1}" v-bind:icon="item.icon" v-bind:desc="item.desc" v-bind:day="item.day | stringdatefilter" v-bind:month="item.month | stringdatefilter" v-bind:year="item.year"></prod_block>
+
+<prod_block v-if="vipdates == 1 && item.vip == 1 && gencat == item.cat && alldates == 0 && changedate == 1 && dpchange == item.day+'.'+item.month+'.'+item.year || vipdates == 1 && item.vip == 1 && gencat == 0 && alldates == 0 && changedate == 1 && dpchange == item.day+'.'+item.month+'.'+item.year" v-for="item in items" v-bind:title="item.title" v-bind:icon="item.icon" v-bind:class="{'vipblock': item.vip == 1}" v-bind:desc="item.desc" v-bind:day="item.day | stringdatefilter" v-bind:month="item.month | stringdatefilter" v-bind:year="item.year"></prod_block>
+</div>
+</div>
+
+<script>
+Vue.component('prod_block', {
+	props: ['title','desc','day','month','year','icon'],
+	template: '<div class="calendar_block animated fadeIn"><div><span v-html="icon"></span> <b>{{ title }}</b><span class="cb_date">{{ day }}.{{ month }}.{{ year }}</span><p>{{ desc }}</p><button type="button" class="btn btn-default date-challenge animated fadeInRight">Participate</button></div></div>'
+});
+
+var app = new Vue({
+	el: '#app',
+	data: {
+	isActive: false,
+	cats: [ // menu generate
+		{ text: 'All', icon: '&#9733;' }, // all categories
+		{ text: 'Theme 1', icon: '&#9734;' },
+		{ text: 'Theme 2', icon: '&#9734;' },
+		{ text: 'Theme 3', icon: '&#9734;' },
+		{ text: 'Theme 4', icon: '&#9734;' },
+		{ text: 'Theme 5', icon: '&#9734;' }
+		],
+	
+	items: [ // объект для генерации контента
+		{ day: 20, month: 1, year: 2019, cat: 1, title: 'Test Event #1', desc: 'Test description for test event.', icon: '&#10026;', vip: 0 },
+		{ day: 21, month: 1, year: 2019, cat: 2, title: 'Test Event #2', desc: 'Test description for test event.', icon: '&#10026;', vip: 1 },
+		{ day: 22, month: 1, year: 2019, cat: 3, title: 'Test Event #3', desc: 'Test description for test event.', icon: '&#10026;', vip: 0 },
+		{ day: 23, month: 1, year: 2019, cat: 4, title: 'Test Event #4', desc: 'Test description for test event.', icon: '&#10026;', vip: 1 },
+		{ day: 24, month: 1, year: 2019, cat: 5, title: 'Test Event #5', desc: 'Test description for test event.', icon: '&#10026;', vip: 0 }
+		],
+
+		alldates: 1,
+		vipdates: 0,
+		changedate: 0,
+		gencat: 0, // start category
+		dpchange: '', // datepicker model
+		dpchangeh3: '', // date for title
+		dpchangetitle: 'All events', // text for title
+		highlighted: {
+		dates: [],		// date for highlight
+		includeDisabled: true
+		}
+	},
+	components: {
+		vuejsDatepicker // connect datepicker
+	},
+	methods: {
+		// click to "all dates" button
+		alldatesCheck() {
+			this.vipdates = 0,
+			this.alldates = 1,
+			this.gencat = 0,
+			this.changedate = 0,
+			this.dpchange = '', // clear datepicker_model
+			this.dpchangeh3 = '',
+			this.dpchangetitle = 'All events' // title for h3
+		},
+		// click to "vip dates" button
+		vipdatesCheck() {
+			this.alldates = 0,
+			this.vipdates = 1,
+			this.gencat = 0,
+			this.changedate = 0,
+			this.dpchangetitle = 'VIP events',
+			this.dpchange = '',
+			this.dpchangeh3 = ''
+		},
+		doSomethingInParentComponentFunction(date) {
+			this.dpchangetitle = 'Events: ', // title for h3
+			this.dpchange = moment(date).format('D.M.YYYY'), // formate date for model datepicker
+			this.dpchangeh3 = moment(date).format('DD.MM.YYYY'), // formate date for h3
+			this.changedate = 1,
+			this.vipdates = 0,
+			this.alldates = 1
+		}
+	},
+	computed: {
+			
+	},
+	mounted() {
+			// mounted process for highlight on dates
+			for (jh=0;jh<this.items.length;jh++) {
+				date_day = this.items[jh].day;
+				date_month = this.items[jh].month - 1;
+				date_year = this.items[jh].year;
+				dateobr = new Date(date_year, date_month, date_day);
+				//console.log(dateobr);
+				this.highlighted.dates.push(dateobr); // data for highlighted
+			}
+	},
+	filters: {
+			stringdatefilter: function(value) {
+				value = parseFloat(value); // float value of month or date
+				if (value < 10) {
+					val = value.toString(); // date to string
+					val = '0'+val;
+					return val;
+				}
+				else {
+					return value;
+				}
+			}
+	}
+	
+});
+</script>
+
+</body>
+</html>
