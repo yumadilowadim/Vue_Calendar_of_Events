@@ -1,4 +1,4 @@
-# Vue_Calendar_of_Events
+# Vue Calendar of Events
 Events(Content) for Vue.js datepicker.
 
 Used: [vue.js](https://github.com/vuejs/vue), [moment.js](https://github.com/moment/moment), [vuejs-datepicker.js](https://github.com/charliekassel/vuejs-datepicker)
