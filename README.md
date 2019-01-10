@@ -21,5 +21,3 @@ items: [ // объект для генерации контента
 ...
 ],
 ```
-
-DEMO: [https://vuecalendarofevents.github.io/](https://vuecalendarofevents.github.io/)
