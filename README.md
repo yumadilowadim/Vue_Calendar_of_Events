@@ -21,3 +21,5 @@ items: [ // items generate
 ...
 ],
 ```
+
+Demo: [https://yumadilowadim.github.io/Vue_Calendar_of_Events/](https://yumadilowadim.github.io/Vue_Calendar_of_Events/)
